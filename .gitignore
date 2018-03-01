@@ -224,4 +224,4 @@ venv.bak/
 # mypy
 .mypy_cache/
 
-/dataset/*.out
+/datasets/*.out

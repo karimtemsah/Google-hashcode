@@ -6,5 +6,7 @@ from .shortest_distance import ShortestDistance
 from .improved_strategy import ImprovedStrategy
 from .random_car_strategy import RandomCarStrategy
 from .earliest_start_no_long_rides import EarliestStartNoLongRidesStrategy
+from .earliest_start_best_car_strategy import EarliestStartBestCarStrategy
 
-__all__ = ('BasicStrategy', 'EarliestStartStrategy', 'ClosestRideNextStrategy', 'FillCarStrategy', 'ShortestDistance', 'ImprovedStrategy', 'RandomCarStrategy', 'EarliestStartNoLongRidesStrategy')
+__all__ = ('BasicStrategy', 'EarliestStartStrategy', 'ClosestRideNextStrategy', 'FillCarStrategy', 'ShortestDistance', 'ImprovedStrategy', 'RandomCarStrategy', 'EarliestStartNoLongRidesStrategy',
+'EarliestStartBestCarStrategy')

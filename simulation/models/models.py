@@ -15,6 +15,32 @@ class Car:
         self.position = [0, 0]
         self.simulation_step = 0
 
+    def get_distance(self, ride):
+        return abs(self.position[0] - ride.start[0]) + abs(self.position[1] - ride.start[1])
+
+    def get_ride_start_time(self, ride):
+        return max(self.simulation_step + self.get_distance(ride), ride.earlieststart)
+    
+    def get_ride_end_time(self, ride):
+        return self.get_ride_start_time(ride) + ride.duration
+
+    def get_nearest_best_ride(self, rides):
+        best_ride = None
+
+        rides = sorted(rides, key=lambda ride: ride.earlieststart)
+        for ride in rides:
+            # First loop
+            if best_ride == None:
+                best_ride = ride
+                continue
+        
+            # Other loops
+            if self.get_ride_end_time(ride) < self.get_ride_end_time(best_ride) and \
+                    self.get_ride_end_time(ride) <= ride.latestend:
+                best_ride = ride
+
+        return best_ride
+
 
 class City:
     def __init__(self, rows, columns, fleet_size, amount_rides, bonus, steps):

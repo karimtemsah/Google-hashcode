@@ -1,12 +1,8 @@
-from ..models import Car, City, Ride
-
-
 class BasicStrategy:
 
     def run(self, city):
 
-        availible_rides = city.rides
-        city.cars = availible_rides
-        city.cars[0].rides.append(availible_rides)
+        for ride in city.rides:
+            city.cars[0].rides.append(ride)
 
         return city

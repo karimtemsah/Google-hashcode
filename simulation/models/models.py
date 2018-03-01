@@ -12,6 +12,7 @@ class Car:
     def __init__(self, id):
         self.id = id
         self.rides = []
+        self.position = [0, 0]
 
 
 class City:

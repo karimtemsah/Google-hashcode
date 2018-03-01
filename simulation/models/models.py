@@ -1,10 +1,10 @@
 class Ride:
-    def __init__(self, duration, startrow, startcolumn, endrow, endcolumn, earlieststart, latestend):
+    def __init__(self, startrow, startcolumn, endrow, endcolumn, earlieststart, latestend):
         self.latestend = latestend
         self.earlieststart = earlieststart
         self.start = [startrow, startcolumn]
         self.end = [endrow, endcolumn]
-        self.duration = duration
+        self.duration = abs(startrow - endrow) + abs(startcolumn - endcolumn)
 
 
 class Car:
@@ -14,7 +14,7 @@ class Car:
 
 
 class City:
-    def __index__(self, rows, columns, fleet_size, amount_rides, bonus, steps):
+    def __init__(self, rows, columns, fleet_size, amount_rides, bonus, steps):
         self.rows = rows
         self.columns = columns
         self.fleet_size = fleet_size
@@ -22,4 +22,3 @@ class City:
         self.bonus = bonus
         self.steps = steps
         self.cars = [Car(i) for i in range(fleet_size)]
-        self.rides = []

@@ -1,3 +1,5 @@
+import math
+
 class Ride:
     def __init__(self, id, startrow, startcolumn, endrow, endcolumn, earlieststart, latestend):
         self.id = id
@@ -37,6 +39,9 @@ class Car:
     
     def get_ride_end_time(self, ride):
         return self.get_ride_start_time(ride) + ride.duration
+
+    def get_ride_end_time_with_penalty(self, ride, penalty):
+        return self.get_ride_start_time(ride) + math.pow(ride.duration, penalty)
 
     def get_nearest_best_ride(self, rides):
         best_ride = None

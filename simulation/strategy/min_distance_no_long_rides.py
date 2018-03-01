@@ -1,9 +1,9 @@
 class MinDistanceNoLongRides:
 
     def run(self, city):
-        city.rides = sorted(city.rides, key=lambda ride: ride.earlieststart)
+        city.rides = sorted(city.rides, key=lambda ride: ride.duration)
 
-        ninetieth_percentile = int(0.74 * len(city.rides))
+        ninetieth_percentile = int(0.9 * len(city.rides))
         rides_short = city.rides[:ninetieth_percentile]
         rides_long = city.rides[ninetieth_percentile:]
         

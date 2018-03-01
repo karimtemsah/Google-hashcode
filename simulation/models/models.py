@@ -1,5 +1,6 @@
 class Ride:
-    def __init__(self, startrow, startcolumn, endrow, endcolumn, earlieststart, latestend):
+    def __init__(self, id, startrow, startcolumn, endrow, endcolumn, earlieststart, latestend):
+        self.id = id
         self.latestend = latestend
         self.earlieststart = earlieststart
         self.start = [startrow, startcolumn]

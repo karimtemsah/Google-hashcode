@@ -10,7 +10,7 @@ class ClosestRideNext:
 
             if city.cars[next_car].simulation_step <= ride.latestend-ride.duration and ride.earlieststart > city.cars[next_car].simulation_step + distance_car_to_ride:
                 city.cars[next_car].rides.append(ride)
-                city.cars[next_car].simulation_step = city.cars[next_car].simulation_step + ride.duration
+                city.cars[next_car].simulation_step = city.cars[next_car].simulation_step + ride.duration + distance_car_to_ride
                 city.cars[next_car].position = ride.end
                 next_car = (next_car + 1) % city.fleet_size
 

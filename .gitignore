@@ -225,3 +225,4 @@ venv.bak/
 .mypy_cache/
 
 /datasets/*.out
+**/*.pyc

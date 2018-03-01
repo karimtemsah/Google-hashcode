@@ -2,7 +2,7 @@ class EarliestStartStrategy:
 
     def run(self, city):
         
-        city.rides = sorted(city.rides, key=lambda ride: ride.start)
+        city.rides = sorted(city.rides, key=lambda ride: ride.earlieststart)
         next_car = 0
 
         for ride in city.rides:

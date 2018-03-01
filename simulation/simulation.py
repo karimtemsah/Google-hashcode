@@ -10,10 +10,10 @@ from .strategy import *
 class Simulation:
 
     def __init__(self, input_file, strategy):
-        self.input_file = 'datasets/' + input_file + '.in'
+        self.input_file = 'datasets/{}.in'.format(input_file)
         print('Running simulation!')
         print('Using strategy: {}'.format(strategy))
-        print('Using dataset: {}.in'.format(input_file))
+        print('Using dataset: {}'.format(self.input_file))
         print('')
 
         if strategy in __all__:
@@ -31,5 +31,5 @@ class Simulation:
         output_data = 'Test'
 
         # Create the Output file
-        output_file = '{}.output'.format(self.input_file)
+        output_file = '{}.out'.format(self.input_file[:-3])
         output.write(output_file, output_data)

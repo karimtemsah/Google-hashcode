@@ -1,7 +1,10 @@
 #!/usr/bin/env python3
 """Solver for the Google Hash Code 2018 Challenge.
 
-Usage: main.py input_file [strategy]
+Usage: main.py problem_statement [strategy]
+
+The problem statement should exist in the datasets folder. Use the name of the
+problem statement without the .in ending.
 """
 
 import sys

@@ -1,8 +1,8 @@
 from ..models.models import City, Ride
-rides = []
-
 
 def read(filename):
+    rides = []
+
     with open(filename, 'r') as file:
         i = 0
         for line in file.readlines():

@@ -1,4 +1,6 @@
-def write(filename, data):
+def write(filename, city):
     with open(filename, 'w') as file:
-        # TODO: Implement
-        file.write(data)
+        for car in city.cars:
+            file.write(car.id)
+            for ride in car.rides:
+                file.write(ride.id)

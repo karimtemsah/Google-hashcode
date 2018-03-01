@@ -22,4 +22,3 @@ class City:
         self.bonus = bonus
         self.steps = steps
         self.cars = [Car(i) for i in range(fleet_size)]
-        self.rides = []

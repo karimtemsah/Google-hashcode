@@ -3,9 +3,12 @@ class ShortestDistance:
     def run(self, city):
         rides = self.bsort(city.rides)
         count = 0
+        counter = 0
         for ride in rides:
             if count < city.fleet_size-1:
-                city.cars[count].rides.append(ride)
+                city.cars[counter].rides.append(ride)
+                if (count % 3) == 0:
+                    counter = counter+1
                 count = count+1
 
         return city

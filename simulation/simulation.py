@@ -10,7 +10,7 @@ from .strategy import *
 class Simulation:
 
     def __init__(self, input_file, strategy):
-        self.input_file = 'datasets/{}.in'.format(input_file)
+        self.input_file = 'datasets/{}'.format(input_file)
         print('Running simulation!')
         print('Using strategy: {}'.format(strategy))
         print('Using dataset: {}'.format(self.input_file))
@@ -24,12 +24,11 @@ class Simulation:
 
     def run(self):
         # Read in the Input File
-        input.read(self.input_file)
+        city = input.read(self.input_file)
         
         # Run the Simulation
-        self.strategy.run()
-        output_data = 'Test'
+        city = self.strategy.run(city)
 
         # Create the Output file
         output_file = '{}.out'.format(self.input_file[:-3])
-        output.write(output_file, output_data)
+        output.write(output_file, city)

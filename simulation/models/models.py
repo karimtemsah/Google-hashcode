@@ -14,7 +14,7 @@ class Car:
 
 
 class City:
-    def __index__(self, rows, columns, fleet_size, amount_rides, bonus, steps):
+    def __init__(self, rows, columns, fleet_size, amount_rides, bonus, steps):
         self.rows = rows
         self.columns = columns
         self.fleet_size = fleet_size

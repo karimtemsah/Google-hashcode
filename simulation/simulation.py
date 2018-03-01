@@ -10,8 +10,12 @@ from .strategy import *
 class Simulation:
 
     def __init__(self, input_file, strategy):
-        print('Running simulation with strategy: {}'.format(strategy))
-        self.input_file = input_file
+        self.input_file = 'datasets/' + input_file + '.in'
+        print('Running simulation!')
+        print('Using strategy: {}'.format(strategy))
+        print('Using dataset: {}.in'.format(input_file))
+        print('')
+
         if strategy in __all__:
             self.strategy = eval(strategy)()
         else:

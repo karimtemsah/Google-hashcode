@@ -19,7 +19,7 @@ if __name__ == "__main__":
         sys.exit(-1)
 
     try:
-        strategy = sys.argv[2]
+        strategy = sys.argv[1]
     except IndexError:
         strategy = 'BasicStrategy'
 

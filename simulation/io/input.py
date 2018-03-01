@@ -1,5 +1,19 @@
+from ..models.models import City, Ride
+rides = []
+
+
 def read(filename):
     with open(filename, 'r') as file:
+        i = 0
         for line in file.readlines():
-            # TODO: Implement
-            print(line)
+            l = line.rstrip('\n').split(" ")
+            if i == 0:
+                city = City(l[0], l[1], l[2], l[3], l[4], l[5])
+            else:
+                rides.append(Ride(l[0], l[1], l[2], l[3], l[4], l[5]))
+            i += 1
+        city.rides = rides
+        print(city)
+        return city
+
+

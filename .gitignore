@@ -226,3 +226,4 @@ venv.bak/
 
 /datasets/*.out
 **/*.pyc
+simulation.zip

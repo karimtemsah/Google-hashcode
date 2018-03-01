@@ -1,4 +1,4 @@
-class ClosestRideNext:
+class ClosestRideNextStrategy:
 
     def run(self, city):
         city.rides = sorted(city.rides, key=lambda ride: ride.start)

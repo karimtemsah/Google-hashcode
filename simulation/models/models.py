@@ -1,10 +1,10 @@
 class Ride:
-    def __init__(self, duration, startrow, startcolumn, endrow, endcolumn, earlieststart, latestend):
+    def __init__(self, startrow, startcolumn, endrow, endcolumn, earlieststart, latestend):
         self.latestend = latestend
         self.earlieststart = earlieststart
         self.start = [startrow, startcolumn]
         self.end = [endrow, endcolumn]
-        self.duration = duration
+        self.duration = abs(startrow - endrow) + abs(startcolumn - endcolumn)
 
 
 class Car:

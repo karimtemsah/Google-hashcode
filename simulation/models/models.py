@@ -13,6 +13,7 @@ class Car:
         self.id = id
         self.rides = []
         self.position = [0, 0]
+        self.simulation_step = 0
 
 
 class City:

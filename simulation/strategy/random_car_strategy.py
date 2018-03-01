@@ -1,10 +1,11 @@
-class BasicStrategy:
+from random import randint
+
+class RandomCarStrategy:
 
     def run(self, city):
 
-        count = 0
-
         for ride in city.rides:
-            city.cars[count].rides.append(ride)
+            car_number = randint(0, city.fleet_size)
+            city.cars[car_number].rides.append(ride)
 
         return city
